@@ -60,26 +60,30 @@ $sql = mysqli_query($con, "INSERT INTO tbCandidates(candidate_name,candidate_pos
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Administration Control Panel:Candidates</title>
 <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <script language="JavaScript" src="js/admin.js">
 </script>
 </head>
 <body bgcolor="tan">
-<center><b><font color = "brown" size="6">Simple PHP Polling System</font></b></center><br><br>
+<center><b><font color = "black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
 <div id="page">
-<div id="header">
-  <h1>MANAGE CANDIDATES</h1>
-  <a href="admin.php">Home</a> | <a href="positions.php">Manage Positions</a> | <a href="candidates.php">Manage Candidates</a> | <a href="refresh.php">Poll Results</a> | <a href="manage-admins.php">Manage Account</a> | <a href="change-pass.php">Change Password</a>  | <a href="logout.php">Logout</a>
-</div>
+<div id="header" style="font-size:20px;color:white">
+    <h1 style="padding: 20px;">MANAGE CANDIDATES</h1>
+    <a href="student.php" style="font-size:20px;">Home</a> | 
+    <a href="vote.php" style="font-size:20px;">Current Polls</a> | 
+    <a href="manage-profile.php" style="font-size:20px;">Manage My Profile</a> | 
+    <a href="changepass.php" style="font-size:20px;">Change Password</a>| 
+    <a href="logout.php" style="font-size:20px;">Logout</a></div>
 <div id="container">
 <table width="380" align="center">
-<CAPTION><h3>ADD NEW CANDIDATE</h3></CAPTION>
+<CAPTION><h2>ADD NEW CANDIDATE</h2></CAPTION>
 <form name="fmCandidates" id="fmCandidates" action="candidates.php" method="post" onsubmit="return candidateValidate(this)">
 <tr>
-    <td>Candidate Name</td>
-    <td><input type="text" name="name" /></td>
+    <td style="font-size:14px;">Candidate Name</td>
+    <td><input class="effect-2" type="text" name="name" /></td>
 </tr>
 <tr>
-    <td>Candidate Position</td>
+    <td style="font-size:14px;">Candidate Position</td>
     <!--<td><input type="combobox" name="position" value="<?php echo $positions; ?>"/></td>-->
     <td><SELECT NAME="position" id="position">select
     <OPTION VALUE="select">select
@@ -96,12 +100,12 @@ $sql = mysqli_query($con, "INSERT INTO tbCandidates(candidate_name,candidate_pos
 </tr>
 <tr>
     <td>&nbsp;</td>
-    <td><input type="submit" name="Submit" value="Add" /></td>
+    <td><input class="butn" type="submit" name="Submit" value="Add" /></td>
 </tr>
 </table>
 <hr>
 <table border="0" width="620" align="center">
-<CAPTION><h3>AVAILABLE CANDIDATES</h3></CAPTION>
+<CAPTION><hw>AVAILABLE CANDIDATES</h2></CAPTION>
 <tr>
 <th>Candidate ID</th>
 <th>Candidate Name</th>
@@ -127,9 +131,6 @@ mysqli_close($con);
 ?>
 </table>
 <hr>
-</div>
-<div id="footer"> 
-  <div class="bottom_addr">&copy; 2012 Simple PHP Polling System. All Rights Reserved</div>
 </div>
 </div>
 </body>

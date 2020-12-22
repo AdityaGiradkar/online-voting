@@ -1,20 +1,19 @@
 <html><head>
-<link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
+<link href="css/user_styles.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="js/user.js">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<script language="JavaScript" src="js/admin.js">
 </script>
-</head><body bgcolor="tan">
-<center><a href ="https://sourceforge.net/projects/pollingsystem/"><img src = "images/logo" alt="site logo"></a></center><br>     
+</head>
+<body bgcolor="#e6e6e6";>
+
 <center><b><font color = "black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
 <div id="page">
 <div id="header" style="font-size:20px;color:white">
-    <h1 style="padding: 20px;">Administrator Login </h1>
-<p align="center">&nbsp;</p>
-</div>
+    <h1 style="padding: 20px;">Student Login </h1></div>
 <div id="container">
 <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
-<form name="form1" method="post" action="checklogin.php" onsubmit="return loginValidate(this)">
+<form name="form1" method="post" action="checklogin.php" onSubmit="return loginValidate(this)">
 <td>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="tan">
 <tr>
@@ -38,6 +37,7 @@
 </tr>
 </table>
 <center>
+<br>Not yet registered? <a href="registeracc.php"><b>Register Here</b></a>
 </center>
 </div>
 </div>
