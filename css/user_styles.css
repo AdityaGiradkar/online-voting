@@ -44,6 +44,10 @@ a:hover {
     color: #99CC00;
 }
 
+.active {
+    color: #554f0a;
+}
+
 .err {
     color: #FF9900;
 }
