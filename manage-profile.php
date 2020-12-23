@@ -37,7 +37,9 @@ $sql = mysqli_query($con,"UPDATE tbMembers SET first_name='$myFirstName', last_n
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Student Profile Management</title>
 <link href="css/user_styles.css" rel="stylesheet" type="text/css" />
@@ -46,27 +48,26 @@ $sql = mysqli_query($con,"UPDATE tbMembers SET first_name='$myFirstName', last_n
 </head>
 <body bgcolor="tan">
      
-<center><b><font color = "brown" size="6">Simple PHP Polling System</font></b></center><br><br>
+<center><b><font color = "black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
 <div id="page">
-<div id="header">
-  <h1>MANAGE MY PROFILE</h1>
-  <a href="student.php">Home</a> | <a href="vote.php">Current Polls</a> | <a href="manage-profile.php">Manage My Profile</a> | <a href="changepass.php">Change Password</a>| <a href="logout.php">Logout</a>
-</div>
+<div id="header" style="font-size:20px;color:white">
+    <h1 style="padding: 20px;">MANAGE MY PROFILE</h1>
+    <a href="student.php" style="font-size:20px;">Home</a> | 
+    <a href="vote.php" style="font-size:20px;">Current Polls</a> | 
+    <a href="manage-profile.php" style="font-size:20px;">Manage My Profile</a> | 
+    <a href="changepass.php" style="font-size:20px;">Change Password</a>| 
+    <a href="logout.php" style="font-size:20px;">Logout</a></div>
 <div id="container">
 <table border="0" width="620" align="center">
-<CAPTION><h3>UPDATE PROFILE</h3></CAPTION>
+<CAPTION><h2>UPDATE PROFILE</h2></CAPTION>
 <form action="manage-profile.php?id=<?php echo $_SESSION['member_id']; ?>" method="post" onsubmit="return updateProfile(this)">
 <table align="center">
-<tr><td>First Name:</td><td><input type="text" style="background-color:#999999; font-weight:bold;" name="firstname" maxlength="15" value="<?php echo $firstName; ?>"></td></tr>
-<tr><td>Last Name:</td><td><input type="text" style="background-color:#999999; font-weight:bold;" name="lastname" maxlength="15" value="<?php echo $lastName; ?>"></td></tr>
-<tr><td>Email Address:</td><td><input type="text" style="background-color:#999999; font-weight:bold;" name="email" maxlength="100" value="<?php echo $email; ?>"></td></tr>
-<tr><td>&nbsp;</td></td><td><input type="submit" name="update" value="Update Profile"></td></tr>
+<tr><td style="font-size:14px">First Name:</td><td><input class="effect-2" type="text" name="firstname" maxlength="15" value="<?php echo $firstName; ?>"></td></tr>
+<tr><td style="font-size:14px">Last Name:</td><td><input class="effect-2" type="text" name="lastname" maxlength="15" value="<?php echo $lastName; ?>"></td></tr>
+<tr><td style="font-size:14px">Email Address:</td><td><input class="effect-2" type="text" name="email" maxlength="100" value="<?php echo $email; ?>"></td></tr>
+<tr><td>&nbsp;</td></td><td><input class="butn" type="submit" name="update" value="Update Profile"></td></tr>
 </table>
 </form>
-<hr>
-</div>
-<div id="footer"> 
-  <div class="bottom_addr">&copy; 2012 Simple PHP Polling System. All Rights Reserved</div>
 </div>
 </div>
 </body>
