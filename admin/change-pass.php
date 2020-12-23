@@ -4,19 +4,16 @@ require('../connection.php');
 ?>
 <html><head>
 <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <script language="JavaScript" src="js/admin.js">
 </script>
-</head><body bgcolor="tan">    
-<center><b><font color = "black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
+</head><body bgcolor="tan">
+<center><a href ="https://sourceforge.net/projects/pollingsystem/"><img src = "images/logo" alt="site logo"></a></center><br>     
+<center><b><font color = "brown" size="6">Simple PHP Polling System</font></b></center><br><br>
 <div id="page">
-<div id="header" style="font-size:20px;color:white">
-    <h1 style="padding: 20px;">MANAGE ADMINISTRATORS </h1>
-    <a href="student.php" style="font-size:20px;">Home</a> | 
-    <a href="vote.php" style="font-size:20px;">Current Polls</a> | 
-    <a href="manage-profile.php" style="font-size:20px;">Manage My Profile</a> | 
-    <a href="changepass.php" style="font-size:20px;">Change Password</a>| 
-    <a href="logout.php" style="font-size:20px;">Logout</a></div>
+<div id="header">
+<h1>MANAGE ADMINISTRATORS </h1>
+<a href="admin.php">Home</a> | <a href="positions.php">Manage Positions</a> | <a href="candidates.php">Manage Candidates</a> | <a href="refresh.php">Poll Results</a> | <a href="manage-admins.php">Manage Account</a> | <a href="change-pass.php">Change Password</a>  | <a href="logout.php">Logout</a>
+</div>
 <div id="container">
 <?php
 //If your session isn't valid, it returns you to the login screen for protection
@@ -69,15 +66,18 @@ if (isset($_GET['id']) && isset($_POST['update']))
 <form action="change-pass.php?id=<?php echo $_SESSION['admin_id']; ?>" method="post" onSubmit="return updateProfile(this)">
 <table align="center">
 <CAPTION><h4>CHANGE PASSWORD</h4></CAPTION>
-<tr><td style="font-size:14px">Old Password:</td><td><input type="password" class="effect-2" name="oldpass" maxlength="15" value=""></td></tr>
-<tr><td style="font-size:14px">New Password:</td><td><input type="password" class="effect-2" name="newpass" maxlength="15" value=""></td></tr>
-<tr><td style="font-size:14px">Confirm Password:</td><td><input type="password" class="effect-2" name="confpass" maxlength="15" value=""></td></tr>
-<tr><td>&nbsp;</td><td><input class="butn" type="submit" name="update" value="Update Account"></td></tr>
+<tr><td>Old Password:</td><td><input type="password" style="background-color:#999999; font-weight:bold;" name="oldpass" maxlength="15" value=""></td></tr>
+<tr><td>New Password:</td><td><input type="password" style="background-color:#999999; font-weight:bold;" name="newpass" maxlength="15" value=""></td></tr>
+<tr><td>Confirm Password:</td><td><input type="password" style="background-color:#999999; font-weight:bold;" name="confpass" maxlength="15" value=""></td></tr>
+<tr><td>&nbsp;</td><td><input type="submit" name="update" value="Update Account"></td></tr>
 </table>
 </form>
 </td>
 </tr>
 </table>
+</div>
+<div id="footer">
+<div class="bottom_addr">&copy; 2012 Simple PHP Polling System. All Rights Reserved</div>
 </div>
 </div>
 </body></html>
