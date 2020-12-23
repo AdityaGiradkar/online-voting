@@ -1,8 +1,8 @@
 <?php 
   if(isset($_POST['myusername']) && isset($_POST['mypassword'])){
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>Simple PHP Polling System Access Denied</title>
@@ -35,20 +35,19 @@
         // MySQL injection protections
         $myusername = stripslashes($myusername);
         echo $mypassword = stripslashes($mypassword);
-        //$myusername = mysqli_real_escape_string($myusername);
-        //$mypassword = mysqli_real_escape_string($mypassword);
+        
 
         $sql=mysqli_query($con, "SELECT * FROM tbmembers WHERE `email`='$myusername' and `password`='$encrypted_mypassword'");
 
         // Checking table row
-        $count=mysqli_num_rows($sql);
+        $count = mysqli_num_rows($sql);
         // If username and password is a match, the count will be 1
 
-        if($count==1){
-        // If everything checks out, you will now be forwarded to student.php
-        $user = mysqli_fetch_assoc($sql);
-        $_SESSION['member_id'] = $user['member_id'];
-        header("location:student.php");
+        if($count == 1){
+          // If everything checks out, you will now be forwarded to student.php
+          $user = mysqli_fetch_assoc($sql);
+          $_SESSION['member_id'] = $user['member_id'];
+          header("location:student.php");
         }
         //If the username or password is wrong, you will receive this message below.
         else {

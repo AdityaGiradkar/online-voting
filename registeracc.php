@@ -50,7 +50,7 @@
                         </tr>
                         <tr>
                             <td>Email Address:</td>
-                            <td><input type='email' style='background-color:#999999; font-weight:bold;' name='email' maxlength='100' id='email'value=''>
+                            <td><input type='email' style='background-color:#999999; font-weight:bold;' pattern="[a-z0-9._%+-]+@vit\.edu$" name='email' maxlength='100' id='email'value=''>
                             <small><span id='result' style='color:red;'></span></small></td>
                         </tr>
                         <tr>

@@ -85,7 +85,7 @@ include('../connection.php');
   </head>
 
   <body>
-      <center><b><font color = "brown" size="6">Simple PHP Polling System</font></b></center><br><br>
+      <center><b><font color = "brown" size="6">Online Polling System</font></b></center><br><br>
       <div id="page">
         <div id="header">
           <h1>MANAGE POSITIONS</h1>
@@ -137,7 +137,7 @@ include('../connection.php');
         </div>
 
         <div id="footer"> 
-          <div class="bottom_addr">&copy; 2012 Simple PHP Polling System. All Rights Reserved</div>
+          <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
         </div>
       </div>
     </body>
