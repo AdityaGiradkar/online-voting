@@ -9,6 +9,7 @@ if(empty($_SESSION['admin_id'])){
 ?>
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <script language="javascript" src="js/jquery-1.2.6.min.js"></script>
 <script language="javascript" src="js/jquery.timers-1.0.0.js"></script>
 <script type="text/javascript">

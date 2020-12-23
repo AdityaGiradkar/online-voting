@@ -43,6 +43,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>Student Profile Management</title>
     <link href="css/user_styles.css" rel="stylesheet" type="text/css" />
@@ -50,33 +51,37 @@
   </head>
 
   <body>   
-    <center><b><font color = "brown" size="6">Simple PHP Polling System</font></b></center><br><br>
+    <center><b><font color = "black" size="6">VI-Voting Platform</font></b></center><br><br>
     <div id="page">
-      <div id="header">
-        <h1>MANAGE MY PROFILE</h1>
-        <a href="student.php">Home</a> | <a href="vote.php">Current Polls</a> | <a href="manage-profile.php">Manage My Profile</a> | <a href="changepass.php">Change Password</a>| <a href="logout.php">Logout</a>
+      <div id="header" style="font-size:20px;color:white">
+    <h1 style="padding: 20px;">MANAGE MY PROFILE</h1>
+        <a href="student.php" style="font-size:20px;">Home</a> |
+        <a href="vote.php" style="font-size:20px;">Current Polls</a> |
+        <a href="manage-profile.php" style="font-size:20px;">Manage My Profile</a>
+        | <a href="changepass.php" style="font-size:20px;">Change Password</a>|
+        <a href="logout.php" style="font-size:20px;">Logout</a>
       </div>
       
       <div id="container">
         <table border="0" width="620" align="center">
-        <CAPTION><h3>CHANGE PASSWORD</h3></CAPTION>
+        <CAPTION><h2>CHANGE PASSWORD</h2></CAPTION>
           <form action="changepass.php?id=<?php echo $_SESSION['member_id']; ?>" method="post">
             <table align="center">
               <tr>
-                <td>Old Password:</td>
-                <td><input type="password" style="background-color:#999999; font-weight:bold;" name="oldpass" maxlength="5" value=""></td>
+                <td style="font-size:14px">Old Password:</td>
+                <td ><input type="password"  class="effect-2" name="oldpass" maxlength="5" value=""></td>
               </tr>
               <tr>
-                <td>New Password:</td>
-                <td><input type="password" style="background-color:#999999; font-weight:bold;" name="newpass" maxlength="5" value=""></td>
+                <td style="font-size:14px">New Password:</td>
+                <td><input type="password" class="effect-2"  name="newpass" maxlength="5" value=""></td>
               </tr>
               <tr>
-                <td>Confirm New Password:</td>
-                <td><input type="password" style="background-color:#999999; font-weight:bold;" name="conpass" maxlength="15" value=""></td>
+                <td style="font-size:14px">Confirm New Password:</td>
+                <td><input type="password" class="effect-2" name="conpass" maxlength="15" value=""></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><input type="submit" name="changepass" value="Update Profile"></td>
+                <td><input type="submit" class="butn"  name="changepass" value="Update Profile"></td>
               </tr>
             </table>
           </form>
@@ -84,7 +89,7 @@
           <hr>
       </div>
       <div id="footer"> 
-        <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
+        <!----->
       </div>
     </div>
   </body>

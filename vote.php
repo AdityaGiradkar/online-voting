@@ -30,8 +30,9 @@
 ?>
 <html>
   <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <title>Online Polling System: Voting Page</title>
+    <title>VI-Voting Platform: Voting Page</title>
 
     <link href="css/user_styles.css" rel="stylesheet" type="text/css" />   
     <script language="JavaScript" src="js/user.js"></script>
@@ -96,14 +97,18 @@
 
   <body>
     <center>
-      <b><font color = "brown" size="6">Online Polling System</font></b>
-    </center>
+    <b><font color="black" size="6" style="font-size: 36px">VI-Voting Platform</font></b>
+  </center>
     <br><br>
 
     <div id="page">
-      <div id="header">
-        <h1>CURRENT POLLS</h1>
-        <a href="student.php">Home</a> | <a href="vote.php">Current Polls</a> | <a href="manage-profile.php">Manage My Profile</a> | <a href="changepass.php">Change Password</a>| <a href="logout.php">Logout</a>
+      <div id="header" style="font-size:20px;color:white">
+    <h1 style="padding: 20px;">CURRENT POLLS</h1>
+        <a href="student.php" style="font-size:20px;">Home</a> |
+        <a href="vote.php" style="font-size:20px;">Current Polls</a> |
+        <a href="manage-profile.php" style="font-size:20px;">Manage My Profile</a>
+        | <a href="changepass.php" style="font-size:20px;">Change Password</a>|
+        <a href="logout.php" style="font-size:20px;">Logout</a>
       </div>
   
       <div class="refresh">
@@ -128,7 +133,7 @@
               </td>
               <td><input type="hidden" id="hidden" value="<?php echo $_SESSION['member_id']; ?>" /></td>
               <td><input type="hidden" id="str" value="<?php echo $_REQUEST['position']; ?>" /></td>
-              <td><input type="submit" name="Submit" value="See Candidates" /></td>
+              <td><input type="submit" class="butn"  name="Submit" value="See Candidates" /></td>
             </tr>
             <tr>
               <td>&nbsp;</td> 
@@ -170,7 +175,7 @@
       </div>
 
       <div id="footer"> 
-        <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
+        <!----->
       </div>
     </div>
   </body>

@@ -9,21 +9,26 @@
 ?>
 <html>
     <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <link href="css/user_styles.css" rel="stylesheet" type="text/css" />
     </head>
     
     <body>
-        <center><b><font color = "brown" size="6">Online Polling System</font></b></center><br><br>
+        <center><b><font color="black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
         <div id="page">
-            <div id="header">
-                <h1>STUDENT HOME </h1>
-                <a href="student.php">Home</a> | <a href="vote.php">Current Polls</a> | <a href="manage-profile.php">Manage My Profile</a> | <a href="changepass.php">Change Password</a>| <a href="logout.php">Logout</a>
+            <div id="header" style="font-size:20px;color:white">
+    <h1 style="padding: 20px;">STUDENT HOME </h1>
+                <a href="student.php" style="font-size:20px;">Home</a> |
+        <a href="vote.php" style="font-size:20px;">Current Polls</a> |
+        <a href="manage-profile.php" style="font-size:20px;">Manage My Profile</a>
+        | <a href="changepass.php" style="font-size:20px;">Change Password</a>|
+        <a href="logout.php" style="font-size:20px;">Logout</a>
             </div>
             <div id="container">
-                <p> Click a link above to do some stuff.</p>
+            <p style="font-size: 24px;"> Click a link above to do some stuff.</p>
             </div>
             <div id="footer">
-                <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
+                <!----->
             </div>
         </div>
     </body>
