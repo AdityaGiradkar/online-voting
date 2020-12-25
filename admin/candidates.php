@@ -40,7 +40,7 @@ if (isset($_POST['Submit'])){
     $id = $_GET['id'];
     
     // delete the entry
-    $result = mysqli_query($con, "DELETE FROM tbCandidates WHERE candidate_id='$id'");
+    $result = mysqli_query($con, "DELETE FROM `tbCandidates` WHERE `candidate_id`='$id'");
     
     // redirect back to candidates
     header("Location: candidates.php");
@@ -52,6 +52,7 @@ if (isset($_POST['Submit'])){
 <!DOCTYPE html >
 <html>
   <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>Administration Control Panel: Candidates</title>
     <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
@@ -59,23 +60,29 @@ if (isset($_POST['Submit'])){
   </head>
 
   <body>
-    <center><b><font color = "brown" size="6">Online Polling System</font></b></center><br><br>
+    <center><b><font color="black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
     <div id="page">
-      <div id="header">
-        <h1>MANAGE CANDIDATES</h1>
-        <a href="admin.php">Home</a> | <a href="positions.php">Manage Positions</a> | <a href="candidates.php">Manage Candidates</a> | <a href="refresh.php">Poll Results</a> | <a href="manage-admins.php">Manage Account</a> | <a href="change-pass.php">Change Password</a>  | <a href="logout.php">Logout</a>
+      <div id="header" style="font-size:20px;color:white">
+        <h1 style="padding: 20px;">ADMINISTRATION CONTROL PANEL </h1>
+        <a href="admin.php" style="font-size:20px;">Home</a> | 
+        <a href="positions.php" style="font-size:20px;">Manage Positions</a> | 
+        <a href="candidates.php" style="font-size:20px;">Manage Candidates</a> | 
+        <a href="refresh.php" style="font-size:20px;">Poll Results</a>| 
+        <a href="manage-admins.php" style="font-size:20px;">Manage Account</a>| 
+        <a href="change-pass.php" style="font-size:20px;">Change Password</a>| 
+        <a href="logout.php" style="font-size:20px;">Logout</a>
       </div>
 
       <div id="container">
         <form name="fmCandidates" id="fmCandidates" action="candidates.php" method="post" onsubmit="return candidateValidate(this)">
-          <CAPTION><h3>ADD NEW CANDIDATE</h3></CAPTION>
-          <table width="380" align="center">
+          <CAPTION><h2>ADD NEW CANDIDATE</h2></CAPTION>
+          <table width="90%" align="center">
             <tr>
-              <td>Candidate Name</td>
-              <td><input type="text" name="name" /></td>
+              <td style="font-size:14px">Candidate Name</td>
+              <td><input class="effect-2" type="text" name="name" /></td>
             </tr>
             <tr>
-              <td>Candidate Position</td>
+              <td style="font-size:14px">Candidate Position</td>
               <!--<td><input type="combobox" name="position" value="<?php echo $positions; ?>"/></td>-->
               <td>
                 <SELECT NAME="position" id="position">
@@ -91,15 +98,15 @@ if (isset($_POST['Submit'])){
             </tr>
             <tr>
               <td>&nbsp;</td>
-              <td><input type="submit" name="Submit" value="Add" /></td>
+              <td><input type="submit" class="butn"  name="Submit" value="Add" /></td>
             </tr>
           </table>
         </form>
 
         <hr>
         
-        <table border="0" width="620" align="center">
-          <CAPTION><h3>AVAILABLE CANDIDATES</h3></CAPTION>
+        <table border="0" width="90%" align="center">
+          <CAPTION><h2>AVAILABLE CANDIDATES</h2></CAPTION>
           <tr>
             <th>Candidate ID</th>
             <th>Candidate Name</th>
@@ -127,7 +134,7 @@ if (isset($_POST['Submit'])){
         <hr>
       </div>
       <div id="footer"> 
-        <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
+        <!----->
       </div>
     </div>
   </body>

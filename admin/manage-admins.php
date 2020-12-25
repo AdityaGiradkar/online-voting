@@ -5,16 +5,23 @@
 
 <html>
     <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
         <script language="JavaScript" src="js/admin.js"></script>
     </head>
     
     <body>
-        <center><b><font color = "brown" size="6">Online Polling System</font></b></center><br><br>
+        <center><b><font color="black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
         <div id="page">
-            <div id="header">
-                <h1>MANAGE ADMINISTRATORS</h1>
-                <a href="admin.php">Home</a> | <a href="positions.php">Manage Positions</a> | <a href="candidates.php">Manage Candidates</a> | <a href="refresh.php">Poll Results</a> | <a href="manage-admins.php">Manage Account</a> | <a href="change-pass.php">Change Password</a>  | <a href="logout.php">Logout</a>
+            <div id="header" style="font-size:20px;color:white">
+                <h1 style="padding: 20px;">ADMINISTRATION CONTROL PANEL </h1>
+                <a href="admin.php" style="font-size:20px;">Home</a> | 
+                <a href="positions.php" style="font-size:20px;">Manage Positions</a> | 
+                <a href="candidates.php" style="font-size:20px;">Manage Candidates</a> | 
+                <a href="refresh.php" style="font-size:20px;">Poll Results</a>| 
+                <a href="manage-admins.php" style="font-size:20px;">Manage Account</a>| 
+                <a href="change-pass.php" style="font-size:20px;">Change Password</a>| 
+                <a href="logout.php" style="font-size:20px;">Logout</a>
             </div>
 
             <div id="container">
@@ -54,27 +61,27 @@
                         <CAPTION><h4>UPDATE ACCOUNT</h4></CAPTION>    
                         <table align="center">
                             <tr>
-                                <td>First Name:</td>
-                                <td><input type="text" style="background-color:#999999; font-weight:bold;" name="firstname" maxlength="15" value="<?php echo $firstName ?>"></td>
+                                <td style="font-size:14px">First Name:</td>
+                                <td><input type="text" class="effect-2" name="firstname" maxlength="15" value="<?php echo $firstName ?>"></td>
                             </tr>
                             <tr>
-                                <td>Last Name:</td>
-                                <td><input type="text" style="background-color:#999999; font-weight:bold;" name="lastname" maxlength="15" value="<?php echo $lastName ?>"></td>
+                                <td style="font-size:14px">Last Name:</td>
+                                <td><input type="text" class="effect-2" name="lastname" maxlength="15" value="<?php echo $lastName ?>"></td>
                             </tr>
                             <tr>
-                                <td>Email Address:</td>
-                                <td><input type="text" style="background-color:#999999; font-weight:bold;" name="email" maxlength="100" value="<?php echo $email?>"></td>
+                                <td style="font-size:14px">Email Address:</td>
+                                <td><input type="text" class="effect-2" name="email" maxlength="100" value="<?php echo $email?>"></td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>
-                                <td><input type="submit" name="update" value="Update Account"></td>
+                                <td><input type="submit" class="butn"  name="update" value="Update Account"></td>
                             </tr>
                         </table>
                     </form>
                 </table>
             </div>
             <div id="footer">
-                <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
+                <!----->
             </div>
         </div>
     </body>

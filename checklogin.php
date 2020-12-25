@@ -4,17 +4,37 @@
 <!DOCTYPE html>
 <html>
   <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <title>Simple PHP Polling System Access Denied</title>
+    <title>VI-Voting Platform Access Denied</title>
     <link href="css/user_styles.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <center><a href ="index.html"><img src="images/vitlogo.png" width="150px" alt="site logo"></a></center><br>     
-    <center><b style="color:brown; font-size:30px;">Simple PHP Polling System</b></center><br><br>
+  <center>
+      <a href="https://www.vit.edu"
+        ><img src="images/vitlogo.png" width="40px" alt="site logo"
+      /></a>
+      <br />
+    </center>
+    <center>
+      <br />
+      <img src="images/graphic.jpg" class="imgae" width="30%" />
+
+      <br />
+
+      <b>
+        <font
+          size="6"
+          style="font-size: 46px; color: black; font-family: Helvetica, sans-serif"
+        >
+          VI-Voting Platform
+        </font>
+      </b>
+    </center><br><br>
     <div id="page">
-      <div id="header">
-        <h1>Invalid Credentials Provided </h1>
+      <div id="header" style="font-size:20px;color:white">
+    <h1 style="padding: 20px;">Invalid Credentials Provided </h1>
         <p align="center">&nbsp;</p>
       </div>
       <div id="container">
@@ -58,7 +78,7 @@
       ?> 
       </div>
       <div id="footer"> 
-        <div class="bottom_addr">&copy; 2012 Simple PHP Polling System. All Rights Reserved</div>
+        <!----->
       </div>
     </div>
   </body>

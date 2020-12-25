@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <title>Online Polling System Access Denied</title>
+    <title>VI-Voting Platform Access Denied</title>
     <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body bgcolor="tan">
-    <center><b><font color = "brown" size="6">Online Polling System</font></b></center><br><br>
+    <center><b><font color="black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
 
     <div id="page">
-      <div id="header">
-        <h1>Invalid Credentials Provided </h1>
+      <div id="header" style="font-size:20px;color:white">
+    <h1 style="padding: 20px;">Invalid Credentials Provided </h1>
         <p align="center">&nbsp;</p>
       </div>
 
@@ -31,7 +32,7 @@
           $myusername=$_POST['myusername'];
           $mypassword=$_POST['mypassword'];
 
-          $encrypted_mypassword=md5($mypassword); //MD5 Hash for security
+          $encrypted_mypassword=$mypassword; //MD5 Hash for security
 
           // MySQL injection protections
           $myusername = stripslashes($myusername);
@@ -59,7 +60,7 @@
       </div>
 
       <div id="footer"> 
-        <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
+        <!----->
       </div>
     </div>
   </body>

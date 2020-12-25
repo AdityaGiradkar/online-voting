@@ -5,16 +5,23 @@
 
 <html>
     <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
         <script language="JavaScript" src="js/admin.js"></script>
     </head>
     
     <body bgcolor="tan">
-        <center><b><font color = "brown" size="6">Online Polling System</font></b></center><br><br>
+        <center><b><font color="black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
         <div id="page">
-            <div id="header">
-                <h1>MANAGE ADMINISTRATORS </h1>
-                <a href="admin.php">Home</a> | <a href="positions.php">Manage Positions</a> | <a href="candidates.php">Manage Candidates</a> | <a href="refresh.php">Poll Results</a> | <a href="manage-admins.php">Manage Account</a> | <a href="change-pass.php">Change Password</a>  | <a href="logout.php">Logout</a>
+            <div id="header" style="font-size:20px;color:white">
+                <h1 style="padding: 20px;">ADMINISTRATION CONTROL PANEL </h1>
+                <a href="admin.php" style="font-size:20px;">Home</a> | 
+                <a href="positions.php" style="font-size:20px;">Manage Positions</a> | 
+                <a href="candidates.php" style="font-size:20px;">Manage Candidates</a> | 
+                <a href="refresh.php" style="font-size:20px;">Poll Results</a>| 
+                <a href="manage-admins.php" style="font-size:20px;">Manage Account</a>| 
+                <a href="change-pass.php" style="font-size:20px;">Change Password</a>| 
+                <a href="logout.php" style="font-size:20px;">Logout</a>
             </div>
 
             <div id="container">
@@ -60,20 +67,20 @@
                         <CAPTION><h4>CHANGE PASSWORD</h4></CAPTION>
                         <table align="center">  
                             <tr>
-                                <td>Old Password:</td>
-                                <td><input type="password" style="background-color:#999999; font-weight:bold;" name="oldpass" maxlength="15" value=""></td>
+                                <td style="font-size:14px">Old Password:</td>
+                                <td><input type="password" class="effect-2" name="oldpass" maxlength="15" value=""></td>
                             </tr>
                             <tr>
-                                <td>New Password:</td>
-                                <td><input type="password" style="background-color:#999999; font-weight:bold;" name="newpass" maxlength="15" value=""></td>
+                                <td style="font-size:14px">New Password:</td>
+                                <td><input type="password" class="effect-2" name="newpass" maxlength="15" value=""></td>
                             </tr>
                             <tr>
-                                <td>Confirm Password:</td>
-                                <td><input type="password" style="background-color:#999999; font-weight:bold;" name="confpass" maxlength="15" value=""></td>
+                                <td style="font-size:14px">Confirm Password:</td>
+                                <td><input type="password" class="effect-2" name="confpass" maxlength="15" value=""></td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>
-                                <td><input type="submit" name="update" value="Update Account"></td>
+                                <td><input type="submit" class="butn"  name="update" value="Update Account"></td>
                             </tr>
                         </table>
                     </form>
@@ -81,7 +88,7 @@
             </div>
 
             <div id="footer">
-                <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
+                <!----->
             </div>
         </div>
     </body>

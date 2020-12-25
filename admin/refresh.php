@@ -4,7 +4,7 @@
   if (isset($_POST['Submit'])){   
     $position = addslashes( $_POST['position'] );
     
-    $results = mysqli_query($con, "SELECT * FROM tbCandidates where candidate_position='$position'");
+    $results = mysqli_query($con, "SELECT * FROM `tbCandidates` where `candidate_position`='$position'");
 
     $row1 = mysqli_fetch_array($results); // for the first candidate
     $row2 = mysqli_fetch_array($results); // for the second candidate
@@ -37,16 +37,23 @@
 
 <html>
   <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
     <script language="JavaScript" src="js/admin.js"></script>
   </head>
   
   <body>
-    <center><b><font color = "brown" size="6">Simple PHP Polling System</font></b></center><br><br>
+    <center><b><font color = "black" size="6">VI-Voting Platform</font></b></center><br><br>
     <div id="page">
-      <div id="header">
-        <h1>POLL RESULTS </h1>
-        <a href="admin.php">Home</a> | <a href="positions.php">Manage Positions</a> | <a href="candidates.php">Manage Candidates</a> | <a href="refresh.php">Poll Results</a> | <a href="manage-admins.php">Manage Account</a> | <a href="change-pass.php">Change Password</a>  | <a href="logout.php">Logout</a>
+      <div id="header" style="font-size:20px;color:white">
+        <h1 style="padding: 20px;">ADMINISTRATION CONTROL PANEL </h1>
+        <a href="admin.php" style="font-size:20px;">Home</a> | 
+        <a href="positions.php" style="font-size:20px;">Manage Positions</a> | 
+        <a href="candidates.php" style="font-size:20px;">Manage Candidates</a> | 
+        <a href="refresh.php" style="font-size:20px;">Poll Results</a>| 
+        <a href="manage-admins.php" style="font-size:20px;">Manage Account</a>| 
+        <a href="change-pass.php" style="font-size:20px;">Change Password</a>| 
+        <a href="logout.php" style="font-size:20px;">Logout</a>
       </div>
 
       <div id="container">
@@ -65,7 +72,7 @@
                   ?>
                 </SELECT>
               </td>
-              <td><input type="submit" name="Submit" value="See Results" /></td>
+              <td><input type="submit" class="butn"  name="Submit" value="See Results" /></td>
             </tr>
             <tr>
               <td>&nbsp;</td> 
@@ -90,7 +97,7 @@ height='20'>
 <br>votes <?php if(isset($_POST['Submit'])){ echo $candidate_2;} ?>
 </div>
 <div id="footer">
-<div class="bottom_addr">&copy; 2012 Simple PHP Polling System. All Rights Reserved</div>
+<!----->
 </div>
 </div>
 </body></html>

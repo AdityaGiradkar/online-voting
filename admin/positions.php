@@ -31,7 +31,7 @@
     $id = $_GET['id'];
     
     // delete the entry
-    $result = mysqli_query($con, "DELETE FROM tbPositions WHERE position_id='$id'");
+    $result = mysqli_query($con, "DELETE FROM `tbPositions` WHERE `position_id`='$id'");
     
     // redirect back to positions
     header("Location: positions.php");
@@ -78,6 +78,7 @@ include('../connection.php');
 <html xmlns="http://www.w3.org/1999/xhtml">
 
   <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>Administration Control Panel:Positions</title>
     <link href="css/admin_styles.css" rel="stylesheet" type="text/css" />
@@ -85,28 +86,34 @@ include('../connection.php');
   </head>
 
   <body>
-      <center><b><font color = "brown" size="6">Online Polling System</font></b></center><br><br>
+      <center><b><font color="black" size="6" style="font-size: 36px">VI-Voting Platform</font></b></center><br><br>
       <div id="page">
         <div id="header">
-          <h1>MANAGE POSITIONS</h1>
-          <a href="admin.php">Home</a> | <a href="positions.php">Manage Positions</a> | <a href="candidates.php">Manage Candidates</a> | <a href="refresh.php">Poll Results</a> | <a href="manage-admins.php">Manage Account</a> | <a href="change-pass.php">Change Password</a>  | <a href="logout.php">Logout</a>
+          <h1 style="padding: 20px;">ADMINISTRATION CONTROL PANEL </h1>
+          <a href="admin.php" style="font-size:20px;">Home</a> | 
+          <a href="positions.php" style="font-size:20px;">Manage Positions</a> | 
+          <a href="candidates.php" style="font-size:20px;">Manage Candidates</a> | 
+          <a href="refresh.php" style="font-size:20px;">Poll Results</a>| 
+          <a href="manage-admins.php" style="font-size:20px;">Manage Account</a>| 
+          <a href="change-pass.php" style="font-size:20px;">Change Password</a>| 
+          <a href="logout.php" style="font-size:20px;">Logout</a>
         </div>
 
         <div id="container">
           <form name="fmPositions" id="fmPositions" action="positions.php" method="post" onsubmit="return positionValidate(this)">
-            <CAPTION><h3>ADD NEW POSITION</h3></CAPTION>  
+            <CAPTION><h2>ADD NEW POSITION</h2></CAPTION>  
             <table width="380" align="center">
               <tr>
                   <td>Position Name</td>
-                  <td><input type="text" name="position" required/></td>
-                  <td><input type="submit" name="Submit" value="Add" /></td>
+                  <td><input class="effect-2" type="text" name="position" required/></td>
+                  <td><input type="submit" class="butn"  name="Submit" value="Add" /></td>
               </tr>
             </table>
           </form>
 
           <hr>
           
-          <CAPTION><h3>AVAILABLE POSITIONS</h3></CAPTION>
+          <CAPTION><h2>AVAILABLE POSITIONS</h2></CAPTION>
           <table  width="420" align="center">
             <tr>
               <th>Sr. No.</th>
@@ -124,7 +131,7 @@ include('../connection.php');
                   <td><?php echo $inc; ?></td>
                   <td><?php echo $row['position_name']; ?></td>
                   <td><a href="positions.php?status_id=<?php echo $row['position_id']; ?>"><?php echo $row['status']; ?></td>
-                  <td><a href="positions.php?id='<?php echo $row['position_id']; ?>'">Delete</a></td>
+                  <td><a href="positions.php?id=<?php echo $row['position_id']; ?>">Delete</a></td>
                 </tr>
             <?php
                 $inc++;
@@ -137,7 +144,7 @@ include('../connection.php');
         </div>
 
         <div id="footer"> 
-          <div class="bottom_addr">&copy; 2020 Online Polling System. All Rights Reserved</div>
+          <!----->
         </div>
       </div>
     </body>
